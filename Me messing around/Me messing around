@@ -1,0 +1,6 @@
+print('My name is Python')
+name = input('What is your name?')
+print('Cool name', name)
+print('I dont have an age')
+age = input('How old are you')
+print('I thought you where older than', age)
