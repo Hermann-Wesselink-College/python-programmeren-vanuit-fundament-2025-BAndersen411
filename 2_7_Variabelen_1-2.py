@@ -1,1 +1,11 @@
-# opdracht 1 en 2 van paragraaf 2.7
+#voornaam = input('Wat is je voornaam?')
+achternaam = input('Wat is je achternaam?')
+print('Halo', voornaam, achternaam)
+naam = input('Wat is jouw naam')
+straat = input('In welke straat woon je?')
+huisnummer = input('Wat is jouw huis nummer?')
+postcode = input('Wat is jouw postcode')
+woonplaats = input('Wat is jouw woonplaats')
+print(naam)
+print(straat, huisnummer)
+print(postcode.upper(), woonplaats.upper())
