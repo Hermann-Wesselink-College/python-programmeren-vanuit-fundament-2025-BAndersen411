@@ -1,5 +1,4 @@
 import random
-
 print("🎲 Welcome to the Guess the Number Game! 🎲")
 
 # Computer picks a random number
@@ -18,4 +17,3 @@ while guess != secret_number:
         print("Too high! Try again ⬇️")
     else:
         print(f"🎉 Correct! The number was {secret_number}. You guessed it in {attempts} tries!")
-#Note i did not make this myself I asked ChatGPT, but know i know how to make it! :)

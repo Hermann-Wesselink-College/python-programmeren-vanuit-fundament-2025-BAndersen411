@@ -1,6 +1,10 @@
-print('My name is Python')
-name = input('What is your name?')
-print('Cool name', name)
-print('I dont have an age')
-age = input('How old are you')
-print('I thought you where older than', age)
+price = 13.95
+sendcost = 2.50
+discount = 5.00
+
+totalCost = price + sendcost
+priceToBePayed = totalCost - discount
+
+print('Total cost is: $' + str(totalCost))
+print('discount: $' + str(discount))
+print('Price to be payed: $' + str(priceToBePayed))
