@@ -1,0 +1,26 @@
+from random import randint
+
+computerGetal = randint(1,100)
+gameover = False
+teller = 0
+
+while not gameover:
+     gebruikerGetal = int(input("Guess the number between 1 and 100 in 8 tries!"))
+     if teller < 8:
+        if computerGetal < gebruikerGetal:
+            print("The computers number is smaller!")
+            teller += 1
+            print(f'Nope, you have {8 - teller} guesses left')
+        elif computerGetal > gebruikerGetal:
+            print("The computers number is higher!")
+            teller += 1
+            print(f'Nope, you have {8 - teller} guesses left')
+        else:
+            print("You guessed it!")
+            gameover = True
+            teller += 1
+            print('You guessed it in '+ str(teller) +' tries.')
+            break
+     if teller == 8:
+        print('Out of guesses game over.')
+        break
