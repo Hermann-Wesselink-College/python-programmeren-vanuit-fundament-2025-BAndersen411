@@ -134,4 +134,3 @@ if nietLangste1 + nietLangste2 > langste:
   print("Dat is een driehoek!")
 else:
   print("Dit kan geen driehoek zijn.")
- 

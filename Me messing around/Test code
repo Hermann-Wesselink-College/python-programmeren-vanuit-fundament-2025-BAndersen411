@@ -1,26 +1,37 @@
-from random import randint
+from datetime import date
+from dateutil.relativedelta import relativedelta
 
-computerGetal = randint(1,100)
-gameover = False
-teller = 0
+d0 = date(2009, 4, 6)
+d1 = date(2025, 10, 21)
 
-while not gameover:
-     gebruikerGetal = int(input("Guess the number between 1 and 100 in 8 tries!"))
-     if teller < 8:
-        if computerGetal < gebruikerGetal:
-            print("The computers number is smaller!")
-            teller += 1
-            print(f'Nope, you have {8 - teller} guesses left')
-        elif computerGetal > gebruikerGetal:
-            print("The computers number is higher!")
-            teller += 1
-            print(f'Nope, you have {8 - teller} guesses left')
-        else:
-            print("You guessed it!")
-            gameover = True
-            teller += 1
-            print('You guessed it in '+ str(teller) +' tries.')
-            break
-     if teller == 8:
-        print('Out of guesses game over.')
-        break
+verschil = relativedelta(d1, d0)
+
+print(f"You are {verschil.years} years {verschil.months} months {verschil.days} days old!")
+
+from datetime import datetime
+
+dob = date(2009,4,6)
+dot = date(2025,10,21)
+
+verschil1 = dot - dob
+
+print(f"You are {verschil1.days} days old!")
+
+
+from datetime import date
+from dateutil.relativedelta import relativedelta
+
+by = int(input("Enter birth year (e.g., 2009): "))
+bm = int(input("Enter birth month (1-12): "))
+bd = int(input("Enter birth day (1-31): "))
+
+ty = int(input("Enter current year (e.g., 2025): "))
+tm = int(input("Enter current month (1-12): "))
+td = int(input("Enter current day (1-31): "))
+
+birth = date(by, bm, bd)
+today = date(ty, tm, td)
+
+age = relativedelta(today, birth)
+
+print(f"You are {age.years} years, {age.months} months and {age.days} days old.")
