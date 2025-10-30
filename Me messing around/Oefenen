@@ -1,0 +1,11 @@
+Speedlimit = int(input('What is the speed limit?'))
+Speed = int(input('What speed where you going?'))
+Diff = Speed - Speedlimit
+if Diff <= 0:
+    print('Je rijdt netjes, geen boete!')
+elif Diff <= 10:
+    print('Jij krijgt een boete van $25.')
+elif Diff > 10 and Diff < 30:
+    print('Jij krijgt een boete van $100.')
+elif Diff >= 30:
+    print('Jij gaat naar het halte!')

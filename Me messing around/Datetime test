@@ -1,30 +1,3 @@
-ArtikleNo = int(input('Geef nummer van artikle.'))
-
-if ArtikleNo == 1:
-    prijs = 10
-elif ArtikleNo == 2:
-    prijs = 15
-elif ArtikleNo == 3:
-    prijs = 20
-else:
-    prijs = 0
-    print("Onbekend artikelnummer")
-
-print(prijs)
-
-KortingsCode = input('Invoer kortings Code: ')
-
-if KortingsCode == 'MoedersDag':
-    print('Jij hebt een korting van 10%')
-    nieuwePrijs = prijs * 0.90
-    print(f"Jouw nieuwe prijs is: €{nieuwePrijs}.")
-else:
-    print('Verkeerde code, probeer opnieuw.')
-
-
-
-
-from datetime import dateime 
-
-d0 = datetime.now()
-d1 = input('Geef jouw Geboorte jaar aan.')
+UserNumber = int(input('What table do you want to know the times table of?'))
+for i in range(1,11):
+ print(str(i) + " keer " + str(UserNumber) + " = " + str(i * UserNumber))

@@ -1,10 +1,43 @@
-price = 13.95
-sendcost = 2.50
-discount = 5.00
+from random import randint
+print('Welcome to the Number Guessing Game!')
+print('To start off you need to give the lowest possible number and the highest possible number that can be guessed, but be careful, because you only have 8 tries!')
+from random import randint
 
-totalCost = price + sendcost
-priceToBePayed = totalCost - discount
+print('Welcome to the Number Guessing Game!')
+print('To start off you need to give the lowest possible number and the highest possible number that can be guessed, but be careful, because you only have 8 tries!')
 
-print('Total cost is: $' + str(totalCost))
-print('discount: $' + str(discount))
-print('Price to be payed: $' + str(priceToBePayed))
+ready = input('Are you ready? (yes/no): ').lower()
+
+if ready == 'yes':
+    MinGetal = int(input('Geef een Mingetal aan: '))
+    MaxGetal = int(input('Geef een Maxgetal aan: '))
+    computerGetal = randint(MinGetal, MaxGetal)
+
+    gameover = False
+    teller = 0
+
+    print('Okay! I have chosen a number between', MinGetal, 'and', MaxGetal)
+
+    while not gameover:
+        gebruikerGetal = int(input('Guess the number between ' + str(MinGetal) + ' and ' + str(MaxGetal) + ': '))
+        if teller < 8:
+            if computerGetal < gebruikerGetal:
+                print("The computer's number is smaller!")
+                teller += 1
+                print('Nope, you have', 8 - teller, 'guesses left')
+            elif computerGetal > gebruikerGetal:
+                print("The computer's number is higher!")
+                teller += 1
+                print('Nope, you have', 8 - teller, 'guesses left')
+            else:
+                teller += 1
+                print('You guessed it!')
+                print('You guessed it in', teller, 'tries.')
+                gameover = True
+                break
+
+        if teller == 8:
+            print('Out of guesses. Game over. The number was', computerGetal)
+            break
+else:
+    print('Okay, maybe next time!')
